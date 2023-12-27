@@ -1,0 +1,12 @@
+fragment customer on Customer {
+  name {
+    firstName
+    middleName
+    lastName
+    displayName
+  }
+}
+
+query test() {
+  customer { ...customer }
+}

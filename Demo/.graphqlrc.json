@@ -1,0 +1,28 @@
+{
+    "schema": "schema.graphql",
+    "documents": "**/*.graphql",
+    "extensions": {
+      "strawberryShake": {
+        "name": "TestClient",
+        "url": "https://example.com/graphql",
+        "dependencyInjection": true,
+        "strictSchemaValidation": true,
+        "hashAlgorithm": "sha256",
+        "useSingleFile": true,
+        "requestStrategy": "Default",
+        "outputDirectoryName": "Generated",
+        "noStore": true,
+        "emitGeneratedCode": true,
+        "razorComponents": false,
+        "records": {
+          "inputs": true,
+          "entities": true
+        },
+        "transportProfiles": [
+          {
+            "default": "Http"
+          }
+        ]
+      }
+    }
+  }

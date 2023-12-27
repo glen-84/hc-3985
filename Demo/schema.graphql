@@ -1,0 +1,22 @@
+schema {
+  query: Query
+}
+
+type Query {
+  customer: Customer
+}
+
+interface Customer {
+  name: PersonName! @deprecated(reason: "Moved to person type")
+}
+
+type Person implements Customer {
+  name: PersonName!
+}
+
+type PersonName {
+  firstName: String!
+  middleName: String
+  lastName: String!
+  displayName: String!
+}
